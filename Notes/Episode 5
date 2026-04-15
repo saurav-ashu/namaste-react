@@ -1,0 +1,17 @@
+There are 2 kinds of exports:
+i) default
+ii) named
+
+named is used when there are multiple Components/ variables are needed to be exported from a file. While importing {} is used for named exports.
+
+React Hook
+Normal JS utility functions with React
+Most used React Hooks
+
+- useState() - mostly used
+  Whenever a state variable updated, React re-renders the component DOM
+- useEffect()
+
+There are other hooks as well
+
+Reconciliation algorithm (React fibre)

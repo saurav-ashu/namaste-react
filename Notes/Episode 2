@@ -1,0 +1,9 @@
+There are 2 kinds of depedancies which building an app. i) Dev dependancy - required by devs while developing ii) Normal dependancy - required to run
+the app normally, needed in production also.
+
+Caret ^ and tilde ~ in package.json. How it updates the versions.
+
+package.json and package-lock.json, if we have these two for an application, we can install all the dependencies. That's why no need of putting
+node_modules folder in Git or cloud codebase.
+
+Learn abput Prcel bundler, documentation on parcel.org

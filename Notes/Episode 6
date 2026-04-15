@@ -1,0 +1,10 @@
+/*
+React hook
+useEffect(), takes 2 arguments, 1st a call back function, 2nd a dependency array
+useEffect( () => {}, [])
+The call-back function is called after the compontnent is rendered.
+
+
+
+
+*/

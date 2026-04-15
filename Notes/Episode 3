@@ -1,0 +1,24 @@
+In package.json we can write custom script to execute in terminal like this app was running using - "npx parcel index.html" this can be configured inside package.json - scripts as "start":"parcel index.html"
+
+JSX is HTML like syntax/ more like XML like, NOT HTML JSX is different than React, is not part of React. It's used with React for ease of readability.
+
+JSX is not directly understood by Browsers or React or JS Engine, it is first transpiled to make it understandable to React/ JS engine. This transpilation is done by Babel(JS Package), whiich in turn is managed by Parcel.\
+
+Babel transpiles the JSX code into React.createElement, that's why if a element is created using React.createElement and using JSX, both are same.
+JSX(Babel transpiles) => React.createElement => ReactElement-JS(Object) => HTML Element (via ReactDOM's render method)
+
+Babel is a transpiler/ JavaScript compiler.
+
+JSX attribute tag are written in camel-Case. JSX written across multiple lines needs to be wrapped by () for Babel to understand.
+
+REACT Components
+2 types of components:
+i) Class Based Components - OLD method
+ii) Functional Componenets - NEW
+
+React Functional Component
+
+- A function that returns a JSX. OR A JavaScript function which returns a React element(JSX).
+- Functional Components should always have their first letter of name in capital.
+
+Component Composition - Using multiple components inside a component OR a mix of components

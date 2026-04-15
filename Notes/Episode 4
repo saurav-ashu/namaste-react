@@ -1,0 +1,6 @@
+Config Driven UI
+
+Why key prop is needed while looping and returning components.
+react says don't use indexes for the looping body as keys.
+
+check map and reduce in js
