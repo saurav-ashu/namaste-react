@@ -1,0 +1,30 @@
+useEffect :
+It is called using a call back function and a dependency array.
+call back function is mandatory, dependency array is optional.
+
+The call back method is called after every render of the component if depedency array is not given.
+Dependency array is used to control the behaviour of useEffect.
+
+3 cases:
+i) When no dependency array is given, the function is called after each component render.
+ii) When empty dependency array is given, the function is called after initial render.
+iii) When depedency array is given some value/ object, the function is called only when the values/ objects changed.
+
+React Router DOM - read on this
+used for routing
+
+children routes
+Outlet component
+
+To navigate between pages we can use <a href> tag, but this results in refresh of the whole page and that is expensive.
+When using react we should try to use routing.
+For this Link component from react-Router-dom is used.
+
+Because of routing, in a website only components are reloaded not the whole page that's why these sites are called SPAs.
+
+Types of Routing
+i) Client side routing - when just the components are changing (using <Link/>)
+
+ii) Server side routing - when the whole page is sent by server and loaded (using <a></a>)
+
+For dynamic routing : is used as, localhost:1234/restaurants/123, in code route "/restaurants/:resId".

@@ -1,0 +1,60 @@
+import { useState, useEffect } from "react";
+import { SWIGGY_MENU_URL } from "../../utils/constants";
+import getRestaurantMenu from "../../utils/mockRestaurantMenuData";
+import Shimmer from "./Shimmer";
+import { useParams } from "react-router-dom";
+
+const RestaurantMenu = () => {
+  const [resMenuInfo, setResMenuInfo] = useState(null);
+
+  const { resId } = useParams();
+  console.log(resId);
+
+  useEffect(() => {
+    fetchMenu();
+  }, []);
+
+  //console.log(getRestaurantMenu("693653"));
+
+  //Valid ids: (10584,Pizza Hut) (1098430, Mealy - Your Everyday Meal)  (23681, McDonald's) (693653, KFC) (264701, Domino's Pizza)
+  //Not valid: (413481, Chinese Wok) (5167, Theobroma)
+
+  const fetchMenu = () => {
+    //
+    // //const SWIGGY_MENU_URL = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.974148148929004&lng=77.65325197158514&restaurantId=920944&catalog_qa=undefined&submitAction=ENTER`;
+    // const resId = 920944;
+    // const data = await fetch(SWIGGY_MENU_URL(resId));
+    //const dataJson = await data.json();
+    //console.log(dataJson);
+
+    //menuData is JSON object
+    const menuData = getRestaurantMenu(resId);
+    //console.log(menuData);
+    setResMenuInfo(menuData[0]);
+  };
+
+  if (!resMenuInfo) return <Shimmer />;
+
+  const { name, cuisines, costForTwoMessage } = resMenuInfo?.data?.data?.cards[2]?.card?.card?.info ?? {};
+
+  const { itemCards } = resMenuInfo?.data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card;
+
+  return (
+    <div className="res-menu">
+      <h1>{name}</h1>
+      <p>
+        {cuisines.join(", ")} - {costForTwoMessage}
+      </p>
+      <h2>Menu</h2>
+      <ul>
+        {itemCards.map((item) => (
+          <li key={item.card.info.id}>
+            {item.card.info.name} - {"Rs "} {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default RestaurantMenu;
