@@ -1,9 +1,10 @@
 import ResturantCard from "./ResturantCard";
-import resList from "../../utils/mockData";
+import restaurantList from "../../utils/mockResturantData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
-let mockListOfRestuarants = resList;
+let mockListOfRestuarants = restaurantList;
 
 const Body = () => {
   const [listOfRestuarants, setlistOfRestuarants] = useState([]);
@@ -11,21 +12,28 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetchData();
+    fetchAllRestaurantData();
   }, []);
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97530&lng=77.59100&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-    );
-    const json = await data.json();
-    console.log(json);
-    //Not a good way to write as below
-    //setlistOfRestuarants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+  const fetchAllRestaurantData = async () => {
+    //Disabling api calls and using mockData setup
+    //Swiggy GET API called for initial data, fetches 8 restaurant cards
+    // const SWIGGY_GET_URL =
+    //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.974148148929004&lng=77.65325197158514&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
-    //Use optional chaining
-    setlistOfRestuarants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // //Calling this post Url didn't work so using mock data, first 8 resturants are fetched from swiggy api
+    // const SWIGGY_POST_URL = "https://www.swiggy.com/dapi/restaurants/list/update";
+
+    //const initialRes = await fetch(SWIGGY_GET_URL);
+    //const initialDatajson = await initialRes.json();
+
+    // const initialList = initialDatajson?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+    // let allRestaurants = [...initialList, ...mockListOfRestuarants];
+
+    let allRestaurants = mockListOfRestuarants;
+    setlistOfRestuarants(allRestaurants);
+    setFilteredListOfRestaurants(allRestaurants);
   };
 
   return filteredListOfRestaurants.length === 0 ? (
@@ -73,8 +81,10 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {filteredListOfRestaurants.map((resturant) => (
-          <ResturantCard key={resturant.info.id} resData={resturant} />
+        {filteredListOfRestaurants.map((restaurant) => (
+          <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
+            <ResturantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
