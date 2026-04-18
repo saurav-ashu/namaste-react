@@ -1,0 +1,32 @@
+Functional components are the latest way to write components, but many comapnies in are using class - based components.
+Conversion of a functional component to class-based component.
+
+In class based components, check how we access props, why super(props) is called in constructor.
+state variables in class- based componenets are created inside the constructor using this.state, this is reserved keyword, state.
+to set state variables in class-based components a method setState is used passing an object with updated state variables values
+
+Note: Never update state variables directly (using = or assignement operator), check whether it updates or not, even if it does it will cause in-consistencies in the code.
+Behind the scenes state variables are stored as an object, and updating any one of them updates only the particular varibale in the object
+
+Life cycle of react class- based component
+life cycle means how a component is mounted on the web page
+
+for a class based component,
+when a component using class-based approach is written in code and it gets called:
+
+- the class is instantiated, then
+- constructor executes, then
+- render function executes, then
+- once DOM is loaded for the component then componentDidMount function executes
+
+In case of multiple children, the order of execution for componentDidMount changes
+constructor and render methods are called in order of the children
+componentDidMount for all children are called at last (kind of together after render methods finishes)
+
+Check - React life cycle diagram - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+React component life cycles have 2 phases
+i) Render phase - constructor and render called
+ii) React actually updated or shows the DOM then componentDidMount called
+that's why for multiple children the Render phase takes place one after the another and constructor and render methods are called in-order
+then in Comit phase the DOM is shown in browser, then componentDidMount is called together for all children
