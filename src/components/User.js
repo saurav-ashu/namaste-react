@@ -1,8 +1,21 @@
 import { useState } from "react";
-
+import { useEffect } from "react";
 const User = (props) => {
   const [count, setCount] = useState(0);
   const [count2] = useState(1);
+
+  useEffect(async () => {
+    console.log("use effect");
+
+    const timer = setInterval(() => {
+      console.log("set interval called");
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+      console.log("use effect's return");
+    };
+  }, []);
 
   const { name } = props;
   return (

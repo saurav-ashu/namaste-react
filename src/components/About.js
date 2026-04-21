@@ -1,5 +1,6 @@
 import User from "./User";
 import UserClass from "./UserClass";
+import { useEffect } from "react";
 
 const About = () => {
   return (
@@ -11,10 +12,10 @@ const About = () => {
           <h1>Functional comps</h1>
           <User name={"Saurav-function"} />
         </div>
-        <div className="class-based-comps">
+        {/* <div className="class-based-comps">
           <h1>Class based comps</h1>
           <UserClass name={"Saurav-class"} location={"Bangalore-class"} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

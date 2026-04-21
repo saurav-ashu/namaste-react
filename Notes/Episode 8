@@ -30,3 +30,19 @@ i) Render phase - constructor and render called
 ii) React actually updated or shows the DOM then componentDidMount called
 that's why for multiple children the Render phase takes place one after the another and constructor and render methods are called in-order
 then in Comit phase the DOM is shown in browser, then componentDidMount is called together for all children
+
+There are 3 different types of life cycle
+i)Mounting - when a component is loaded/ mounted/ executed for the 1st time
+ii)Updating - when component which was already mounted goes under a modification - triggered by setState(), new props passed, forceUpdate()
+iii)Unmounting - when a component gets removed from the DOM
+see the link above for more info
+
+Also at first it looks like useEffect hook in functional components are similar to componentDidMount() for class-based components - BUT IT IS NOT
+Functional componenets and the hooks used are a new implementation and have different working.
+
+UnMounting -is used for cleanup (see other use cases)
+
+- class-based comps - componentWillUnMount()
+- functional comps - iside useEffect() use a return which returns a method, which executes when comp unmounts.
+
+see why in useEffect we can't pass the function as async
