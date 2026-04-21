@@ -1,0 +1,25 @@
+Optimizing app
+
+Keep component code minimal, follow single responsibility priciple/ separation of concern
+
+One part of optimization is bundling of the code, parcel bundles all the js code in one file, this is useful for smaller scale apps where code and components are less.
+In case of large enterprise apps if all the code are bundled in a single file, that's become expensive for the browsers to handle.
+So making different bundles is better, how to decide the main parameter for bundling?
+
+Taking example of makemytrip, the site offers various booking features like:
+flight, hotel, trains, buses, cabs, villas/homestays etc
+So the bundling can be done separately for all these different features
+
+this bundling has different names as:
+chunking
+Code splitting
+dynamic bundling
+lazy loading
+on demand loading
+dynamic import
+
+For this app, consider there was a feature for swiggy instamart and it has its own separate components
+
+to do this we will load the grocery component only when it is clicked
+so to do that react library gives a function lazy(), see app.js
+we use suspense component with lazy loaded components to show a fallback case when the component's code is being fetched

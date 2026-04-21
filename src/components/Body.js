@@ -3,6 +3,7 @@ import restaurantList from "../../utils/mockResturantData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 let mockListOfRestuarants = restaurantList;
 
@@ -36,6 +37,14 @@ const Body = () => {
     setFilteredListOfRestaurants(allRestaurants);
   };
 
+  const onlineStatus = useOnlineStatus();
+  if (!onlineStatus) {
+    return (
+      <div className="client-offline">
+        <h1>Looks like you are Offline! Please check your internet connection.</h1>
+      </div>
+    );
+  }
   return filteredListOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (

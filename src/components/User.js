@@ -4,7 +4,8 @@ const User = (props) => {
   const [count, setCount] = useState(0);
   const [count2] = useState(1);
 
-  useEffect(async () => {
+  useEffect(() => {
+    //why can't async ()=> {} be used here
     console.log("use effect");
 
     const timer = setInterval(() => {

@@ -6,4 +6,25 @@ Caret ^ and tilde ~ in package.json. How it updates the versions.
 package.json and package-lock.json, if we have these two for an application, we can install all the dependencies. That's why no need of putting
 node_modules folder in Git or cloud codebase.
 
-Learn abput Prcel bundler, documentation on parcel.org
+Learn about Prcel bundler, documentation on parcel.org
+
+Parcel, things it does
+
+- Dev build
+- Local server setup
+- HMR hot module replacement, optimzied replacement to reload the site after any code change
+- File watching algo - written in C++, to target only the files with modifications
+- Caching - faster rebuilds
+- Image optimization
+- Minification
+- Bundling - creation of single js files for all the code in the repo, in the dist folder
+- Compress
+- Consistent Hashing
+- Code Splitting
+- Differential bundling - to support older browsers
+- Error handling
+- HTTPs
+- Tree shaking - remove unused code while bundling
+- Different dev and prod bundles
+
+read more at https://parceljs.org/docs/
