@@ -1,0 +1,14 @@
+SCSS and SASS
+
+scss similar to css, with addition features like variables, nesting etc.
+
+Things used with React for css,
+
+- styled components - https://styled-components.com/
+- material UI - https://mui.com/
+- bootstrap - https://getbootstrap.com/
+- chakra UI - https://chakra-ui.com/
+- tailwind - https://tailwindcss.com/
+- ant UI - https://ant.design/
+
+postcss - PostCSS - transforming css with js

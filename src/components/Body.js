@@ -49,17 +49,18 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filters">
-        <div className="search">
+      <div className="flex content-between">
+        <div className="m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="m-2 p-2 border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
+            className="m-2 p-2 bg-purple-300 border border-solid border-purple-700 rounded-lg"
             onClick={() => {
               const searchFilteredRestaurantList = listOfRestuarants.filter((res) => {
                 return res.info.name.toLowerCase().includes(searchText.toLowerCase());
@@ -70,26 +71,30 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="top-rated-filter-btn"
-          onClick={() => {
-            const topRatedFilteredRestuarants = listOfRestuarants.filter((res) => res.info.avgRating > 4.5);
-            setFilteredListOfRestaurants(topRatedFilteredRestuarants);
-          }}
-        >
-          Top rated Restuarants
-        </button>
-        <button
-          className="clear-filter-btn"
-          onClick={() => {
-            setFilteredListOfRestaurants(listOfRestuarants);
-            setSearchText("");
-          }}
-        >
-          Clear filter
-        </button>
+        <div className="m-4 p-4">
+          <button
+            className="m-2 p-2 bg-purple-300 border border-solid border-purple-700 rounded-lg"
+            onClick={() => {
+              const topRatedFilteredRestuarants = listOfRestuarants.filter((res) => res.info.avgRating > 4.5);
+              setFilteredListOfRestaurants(topRatedFilteredRestuarants);
+            }}
+          >
+            Top rated Restuarants
+          </button>
+        </div>
+        <div className="m-4 p-4">
+          <button
+            className="m-2 p-2 bg-purple-300 border border-solid border-purple-700 rounded-lg"
+            onClick={() => {
+              setFilteredListOfRestaurants(listOfRestuarants);
+              setSearchText("");
+            }}
+          >
+            Clear filter
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {filteredListOfRestaurants.map((restaurant) => (
           <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
             <ResturantCard resData={restaurant} />
