@@ -7,4 +7,14 @@ Controlled and Un-controlled components
 
 Lifting state up in react
 
-Props drilling
+Props drilling -read docs
+
+Data flow in react is one way from parent components to child components.
+In a large application this can become a problem or a tedious thing to maintain.
+One way is to keep passing the data as props from the topmost parent down to the child which needs the data, this is called props drilling.
+
+React context - like a global space and anyone can access data from it
+like a central store of data,
+ex - data of a logged in user, because this can be used in many places in a app
+
+Context.Provider and Context.Consumer
