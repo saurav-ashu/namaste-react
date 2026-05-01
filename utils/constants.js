@@ -3,6 +3,8 @@ export const APP_LOGO_URL =
 
 export const RESTURANT_CARD_IMG_BASE_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
+export const ITEM_IMG_BASE_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+
 // src/utils/constants.js
 export const SWIGGY_RESTAURANT_LIST_URL =
   "http://localhost:3000/swiggy/dapi/restaurants/list/v5?lat=12.974148148929004&lng=77.65325197158514&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

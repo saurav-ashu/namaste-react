@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import app_logo from "../foodapp_logo.png";
 import Header from "./components/Header";
@@ -9,16 +9,34 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import AboutClass from "./components/AboutClass";
+import UserContext from "../utils/UserContext";
 //import Grocery from "./components/Grocery"; // instead of importing Grocery, use lazy method
 
 const Grocery = lazy(() => import("./components/Grocery")); //the import used here is different from the imports at top, needs a named import from React
 
 const AppLayout = () => {
+  const [username, setUsername] = useState();
+
+  //authentication
+  useEffect(() => {
+    //make api call to authenticate and fetch username
+    const data = { name: "Saurav" };
+    setUsername(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    //if there are elements/ components outside they will use Default user for user context
+    <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
+      {/** username.name i.e Saurav in all places in the app */}
+      <div className="app">
+        <UserContext.Provider value={{ loggedInUser: username }}>
+          {/* Luois in the header*/}
+          <Header />
+        </UserContext.Provider>
+
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
@@ -33,7 +51,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <AboutClass />,
       },
       {
         path: "/contact",

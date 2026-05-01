@@ -4,6 +4,7 @@ const restaurantList = [
     info: {
       id: "10584",
       name: "Pizza Hut",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/12/9377b0a4-b665-4697-84ee-b1c714120dbc_10584.JPG",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -83,6 +84,7 @@ const restaurantList = [
     info: {
       id: "1098430",
       name: "Mealy - Your Everyday Meal",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/9c9fb6c0-536c-4dfd-8940-9584bd1735eb_1098430.jpg",
       locality: " CMH Road",
       areaName: "Indiranagar",
@@ -157,6 +159,7 @@ const restaurantList = [
     info: {
       id: "413481",
       name: "Chinese Wok",
+      promoted: true,
       cloudinaryImageId: "e0839ff574213e6f35b3899ebf1fc597",
       locality: "HAL 2nd Stage",
       areaName: "Indiranagar",
@@ -234,6 +237,7 @@ const restaurantList = [
     info: {
       id: "23681",
       name: "McDonald's",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/3/00eed298-fd30-4892-854a-5b8e2e50cb2c_23681.JPG",
       locality: "Indiranagar, CMH Road",
       areaName: "Ashwini Complex,Indiranagar",
@@ -309,6 +313,7 @@ const restaurantList = [
     info: {
       id: "693653",
       name: "KFC",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/4/11/7c4c2361-588f-448a-b079-adf70891876e_693653.JPG",
       locality: "Indiranagar",
       areaName: "HAL 2nd stage",
@@ -400,6 +405,7 @@ const restaurantList = [
     info: {
       id: "5167",
       name: "Theobroma",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/4/13/22b08246-2abb-4d9f-9379-b07d4b18a0a4_5167.JPG",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -505,6 +511,7 @@ const restaurantList = [
     info: {
       id: "264701",
       name: "Domino's Pizza",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/27/67adb332-8cac-4b37-8605-5a427a06a15e_264701.JPG",
       locality: "New Thipasandra",
       areaName: "Indiranagar",
@@ -617,6 +624,7 @@ const restaurantList = [
     info: {
       id: "37888",
       name: "Subway",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/12/0c9941ab-06c0-45e8-bd3b-3459b06683fa_37888.jpg",
       locality: "CV Raman Nagar",
       areaName: "CV Raman Nagar",
@@ -797,6 +805,7 @@ const restaurantList = [
     info: {
       id: "495962",
       name: "Shree Chat Point Bangarpet Pani Puri",
+      promoted: true,
       cloudinaryImageId: "xixjg3oq3m7fafn58lmb",
       locality: "3Rd Stage ",
       areaName: "New Thipasandra",
@@ -888,6 +897,7 @@ const restaurantList = [
     info: {
       id: "136193",
       name: "Kabab Souq",
+      promoted: true,
       cloudinaryImageId: "intyfalqayh6ueqssb9c",
       locality: "Kaggadasapura",
       areaName: "Kaggadasapura",
@@ -962,6 +972,7 @@ const restaurantList = [
     info: {
       id: "468221",
       name: "AL-Arabic Shawarma",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/17/060ddaea-7d6a-4d31-91e5-1c906e493ebb_468221.jpg",
       locality: "New Thippasandra",
       areaName: "Indiranagar",
@@ -1036,6 +1047,7 @@ const restaurantList = [
     info: {
       id: "34989",
       name: "Sabari Juice Junction",
+      promoted: true,
       cloudinaryImageId: "db4b379c5c33dae61b823a6e293a91e5",
       locality: "Jeewan Nagar",
       areaName: "Indiranagar",
@@ -1128,6 +1140,7 @@ const restaurantList = [
     info: {
       id: "902048",
       name: "The Veg & Veg",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/25/3c99f9ea-7208-4f7f-9c7f-aff51ec8e4d2_902048.jpg",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -1220,6 +1233,7 @@ const restaurantList = [
     info: {
       id: "1081084",
       name: "Sandowitch",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/5/28/5594a5ca-cbea-4d9b-852a-b6464cd2a39a_1081084.jpg",
       locality: "Bhoomi Reddy Colony",
       areaName: "Indiranagar",
@@ -1291,6 +1305,7 @@ const restaurantList = [
     info: {
       id: "811220",
       name: "Mom's Dabba",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/8/a5ad58c9-f26a-4719-a655-ac6cef2246a4_811220.jpg",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -1366,6 +1381,7 @@ const restaurantList = [
     info: {
       id: "444178",
       name: "Magnolia Bakery",
+      promoted: true,
       cloudinaryImageId: "6f0945b8b18d9f4241dd1cd9a70e23d7",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -1483,6 +1499,7 @@ const restaurantList = [
     info: {
       id: "457742",
       name: "Taco Street",
+      promoted: false,
       cloudinaryImageId: "6150ab1cf1b78ec6e322303c1fe77418",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -1557,6 +1574,7 @@ const restaurantList = [
     info: {
       id: "621642",
       name: "Bao Bangalore",
+      promoted: true,
       cloudinaryImageId: "b44f23e62a87d4c82d90bbdfc3c30d59",
       locality: "Jeevan Bhima Nagar",
       areaName: "Indiranagar",
@@ -1634,6 +1652,7 @@ const restaurantList = [
     info: {
       id: "474649",
       name: "Art Of Delight - Crafted Ice Creams And Desserts",
+      promoted: false,
       cloudinaryImageId: "yyt8rtsidoqjj0viam6s",
       locality: "BDA MAIN ROAD",
       areaName: "Indiranagar",
@@ -1727,6 +1746,7 @@ const restaurantList = [
     info: {
       id: "1054116",
       name: "Dabba & Co.",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/19/7ae45d8b-fc65-4cb6-bfa0-ed93fe88197d_1054116.jpg",
       locality: "Beml Circle, Opp Kempegowda Statue, Below Red chilly restaurant, Near GMR Pride HDFC bank",
       areaName: "New Tippasandra",
@@ -1801,6 +1821,7 @@ const restaurantList = [
     info: {
       id: "1094290",
       name: "Shawarmajaan",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/77f2db49-49a7-4e59-a554-362fdcfc1cbd_1094290.jpg",
       locality: "Beml Circle, Opp Kempegowda Statue, Below Red chilly restaurant, Near GMR Pride HDFC bank",
       areaName: "New Tippasandra",
@@ -1875,6 +1896,7 @@ const restaurantList = [
     info: {
       id: "1236712",
       name: "LeanCrust Pizza- ThinCrust Experts",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/19/93dd78ab-9c96-4981-829b-f3696efc2def_1236712.jpg",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -1967,6 +1989,7 @@ const restaurantList = [
     info: {
       id: "1111199",
       name: "99 Square Pizza",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/17/81a80537-f9dd-4eb1-93e5-0536a6a7c216_1111199.jpg",
       locality: "Beml Circle, Opp Kempegowda Statue, Below Red chilly restaurant, Near GMR Pride HDFC bank",
       areaName: "New Tippasandra",
@@ -2041,6 +2064,7 @@ const restaurantList = [
     info: {
       id: "1236709",
       name: "Bhatti Chicken - Grilled, NOT Fried!",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/19/0987f712-74b7-4a4b-9cc4-afc088abd19c_1236709.jpg",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2134,6 +2158,7 @@ const restaurantList = [
     info: {
       id: "1236719",
       name: "1881 Dum House: Lucknow's Legacy",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/19/49fa8408-8b73-42f7-bfb9-f0168f0e0f97_1236719.jpg",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2237,6 +2262,7 @@ const restaurantList = [
     info: {
       id: "837846",
       name: "The Pizza Project by Oven Story",
+      promoted: false,
       cloudinaryImageId: "f1b907b0b8f86c62e4fc347c6b1434e6",
       locality: "Beml Circle, Opp Kempegowda Statue, Below Red chilly restaurant, Near GMR Pride HDFC bank",
       areaName: "New Tippasandra",
@@ -2311,6 +2337,7 @@ const restaurantList = [
     info: {
       id: "1236714",
       name: "Hola Pasta - Fresh Gourmet Pasta",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/23/98966759-1b9b-475a-ae3d-4c52f2b01fe0_1236714.JPG",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2403,6 +2430,7 @@ const restaurantList = [
     info: {
       id: "1236706",
       name: "Mealful Rolls - India's Biggest Rolls",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/8/6baa0783-0f67-4ff4-b7f5-77d4fe1ed80f_1236706.JPG",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2506,6 +2534,7 @@ const restaurantList = [
     info: {
       id: "263682",
       name: "Veg Meals By LunchBox",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/2/15/f3c8210a-8915-4feb-8403-67614051d1fb_263682.JPG",
       locality: "Beml Circle, Opp Kempegowda Statue, Below Red chilly restaurant, Near GMR Pride HDFC bank",
       areaName: "New Tippasandra",
@@ -2598,6 +2627,7 @@ const restaurantList = [
     info: {
       id: "1236717",
       name: "Zulu's Pizza - Fresh Fanatics",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/10/19/18797bdb-760f-441d-aa42-e12d6c0b5e2c_1236717.jpg",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2701,6 +2731,7 @@ const restaurantList = [
     info: {
       id: "736843",
       name: "Prasuma Momo Kitchen",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/19/b76af9d0-4db7-4778-a5c9-7bda658df420_736843.jpg",
       locality: "New tippasanda",
       areaName: "CV Raman Nagar",
@@ -2775,6 +2806,7 @@ const restaurantList = [
     info: {
       id: "1236705",
       name: "Itminaan Matka Biryani - Slow Cooked",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/24/2379d8ff-bf46-48a4-988b-dd3151a1c82d_1236705.JPG",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2868,6 +2900,7 @@ const restaurantList = [
     info: {
       id: "1236711",
       name: "BOOM - Sub Style Sandwiches",
+      promoted: true,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/12/10/bdc128bf-b796-4b23-830c-d2fb3e492bfe_1236711.JPG",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -2960,6 +2993,7 @@ const restaurantList = [
     info: {
       id: "1236718",
       name: "GharSe - Homestyle & Healthy Tiffins",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/24/3a078b95-845a-436b-968d-1500360fddb0_1236718.JPG",
       locality: "80 ft Road",
       areaName: "Indira Nagar",
@@ -3062,6 +3096,7 @@ const restaurantList = [
     info: {
       id: "434665",
       name: "IDC Kitchen",
+      promoted: false,
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/2/10439e80-0d10-44f0-ac94-73f2277e72d5_434665.jpg",
       locality: "Indiranagar",
       areaName: "Indiranagar",
@@ -3156,6 +3191,7 @@ const restaurantList = [
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
       id: "596308",
+      promoted: false,
       name: "No Sugar, Please! -Juices, Salads & Fruit Bowls",
       cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/4/93b83258-d77b-4dbe-8013-a72fb1b16f68_596308.jpg",
       locality: "Indiranagar",
@@ -3231,6 +3267,7 @@ const restaurantList = [
     info: {
       id: "201516",
       name: "Polar Bear",
+      promoted: true,
       cloudinaryImageId: "57262fe3839f0bff174f3d7e7cc8a2b4",
       locality: "HAL 2nd Stage",
       areaName: "Indiranagar",

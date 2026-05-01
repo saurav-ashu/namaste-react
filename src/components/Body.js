@@ -1,9 +1,10 @@
-import ResturantCard from "./ResturantCard";
+import RestaurantCard, { withPromotedLabel } from "./ResturantCard";
 import restaurantList from "../../utils/mockResturantData";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 let mockListOfRestuarants = restaurantList;
 
@@ -12,9 +13,13 @@ const Body = () => {
   const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   useEffect(() => {
     fetchAllRestaurantData();
   }, []);
+
+  const { loggedInUser, setUsername } = useContext(UserContext);
 
   const fetchAllRestaurantData = async () => {
     //Disabling api calls and using mockData setup
@@ -93,11 +98,15 @@ const Body = () => {
             Clear filter
           </button>
         </div>
+        <div className="m-4 p-4">
+          <label className="m-2 p-2">Username:</label>
+          <input className="border border-black m-2 p-2 rounded-lg" value={loggedInUser} onChange={(e) => setUsername(e.target.value)}></input>
+        </div>
       </div>
       <div className="res-container flex flex-wrap">
         {filteredListOfRestaurants.map((restaurant) => (
           <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id}>
-            <ResturantCard resData={restaurant} />
+            {restaurant.info.promoted ? <RestaurantCardPromoted resData={restaurant} /> : <RestaurantCard resData={restaurant} />}
           </Link>
         ))}
       </div>

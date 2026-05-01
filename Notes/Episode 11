@@ -1,0 +1,10 @@
+Higher Order Component
+Takes a component and returns a component after some enhancements
+
+Accordion display
+
+Controlled and Un-controlled components
+
+Lifting state up in react
+
+Props drilling
