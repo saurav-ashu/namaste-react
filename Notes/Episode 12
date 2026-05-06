@@ -1,0 +1,62 @@
+Redux
+
+Redux is a data store tool - maybe, check online
+It is not a mandatory thing for an application, but once an app become large with huge data to handle its good to use redux in that case.
+Even then a large app can be made without using redux.
+
+React and Redux are separate libraries
+Zustand is a similar library
+
+Redux is used to handle state of app, easier debugging
+Redux toolkit is the latest way for writing redux code
+https://redux-toolkit.js.org/introduction/getting-started
+
+Redux store is a large JS object with huge data for an app, kept in a global central place.
+Slices are small portion of a redux store
+
+For this app, let's say we have a slice for Cart in the redux store.
+Data cannot be directly inserted to the cart slice, there is a method to insert data.
+So when add button is clicked on a food item, it dispatches an action, and the action calls a function, and the function modifies the cart
+Add button clicked -> action dispatched -> function called -> cart modified by funtion
+the function above is known as reducer
+
+Add button clicked -> dispatches an action -> calls the reducer function -> updates the slice (cart) of the redux store
+The above flow is for writing data to the redux store
+
+Reading data:
+Selector is used to read data from store and it is used to modify the react component,
+whenever a component is reading data using selector from redux store it is known as - subscribing to the store
+In our case Header component (Cart) is subscribed to the redux's Cart slice
+how does a component subscribe to the store - using selector
+so as a unit, when Add button is clicked for an menu item, the cart will get updated and the Header's cart will show the updated cart item number
+
+#Redux toolkit
+
+- install @reduxjs/toolkit and react-redux
+- build our store
+- connect our store to our app
+- Slice (cartSlice)
+- dispatch(action)
+- Selector
+
+A selector is a hook
+
+Important note: Only subscribe to the right part of the store, meaning only subscribe to the data which the component needs.
+Subscribing to additional parts can result in performance hit.
+In this app, in Cart component, we have subscribied to only the items part of the store.
+Instead we can subscribe to the whole store and its would work. But this will result in a performance hit as in when the app becomes large any change in the whole store will cause re-render for cart component if it is subscribed to the store.
+
+1. use selector carefully - subscribe to only the part of data store which is needed
+2. check for reducers/ reducer terms while using in export and defining statements in the redux store setup
+
+In old version of redux - vanilla redux
+redux suggested - DON'T MUTATE THE STATE, so a new state was created using the passed state and then modified and returned, return was mandatory
+
+In redux toolkit - HAVE TO MUTATE THE EXISTING STATE OR RETURN THE NEW STATE
+react toolkit does mutate the state behind the scene, lifting the burden from developers
+it uses a library - immer for mutating the state
+
+install redux dev tools extension - really helpful for debugging
+
+redux toolkit docs - RTK Query
+https://redux-toolkit.js.org/tutorials/rtk-query

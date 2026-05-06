@@ -10,6 +10,9 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import AboutClass from "./components/AboutClass";
 import UserContext from "../utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
+import Cart from "./components/Cart";
 //import Grocery from "./components/Grocery"; // instead of importing Grocery, use lazy method
 
 const Grocery = lazy(() => import("./components/Grocery")); //the import used here is different from the imports at top, needs a named import from React
@@ -25,18 +28,20 @@ const AppLayout = () => {
   }, []);
 
   return (
-    //if there are elements/ components outside they will use Default user for user context
-    <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
-      {/** username.name i.e Saurav in all places in the app */}
-      <div className="app">
-        <UserContext.Provider value={{ loggedInUser: username }}>
-          {/* Luois in the header*/}
-          <Header />
-        </UserContext.Provider>
+    <Provider store={appStore}>
+      {/* if there are elements/ components outside they will use Default user for user context */}
+      <UserContext.Provider value={{ loggedInUser: username, setUsername }}>
+        {/** username.name i.e Saurav in all places in the app */}
+        <div className="app">
+          <UserContext.Provider value={{ loggedInUser: username }}>
+            {/* Luois in the header*/}
+            <Header />
+          </UserContext.Provider>
 
-        <Outlet />
-      </div>
-    </UserContext.Provider>
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -68,6 +73,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
